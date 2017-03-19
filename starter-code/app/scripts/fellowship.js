@@ -162,7 +162,24 @@ function forgeTheFellowShip() {
   // create a new div called 'the-fellowship' within rivendell
   // add each hobbit and buddy one at a time to 'the-fellowship'
   // after each character is added make an alert that they have joined your party
+var rivendell = document.getElementById('Rivendell');
+var theFellowship = document.createElement('div');
+theFellowship.id = "the-fellowship";
+rivendell.appendChild(theFellowship);
+  for (i=0; i<buddies.length; i++) {
+    var buddyAdd = document.querySelector('#thisBuddyHolder li');          // <----THIS: When looping a for loop with 
+    var fellowshipHolder = document.querySelector('#the-fellowship');      //      children you don't have to number it
+    fellowshipHolder.appendChild(buddyAdd);                                 // it will just take the "first" element each time because you're using query Selector.
+    alert(buddyAdd.id + " has joined your INVINCIBLE party!");
+  }
+  for (i=0; i<hobbits.length;i++) {
+    var hobbitAdd = document.querySelector('#hobbitHole li');
+    var fewllowshipHolder = document.querySelector('#the-fellowship');
+    fewllowshipHolder.appendChild(hobbitAdd);
+    alert(hobbitAdd.textContent + " has joined your INVINCIBLE party");
+  }
 }
+forgeTheFellowShip();
 
 
 // Part 8
