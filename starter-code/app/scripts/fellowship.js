@@ -78,12 +78,22 @@ makeHobbits();
 // Part 3
 
 function keepItSecretKeepItSafe() {
+
+  var theRingDiv = document.createElement('div');
+  theRingDiv.id = "the-ring";
+  theRingDiv.class = 'magic-imbued-jewelry';
+  var frodo = document.querySelector('#hobbitHole li');
+  theRingDiv.addEventListener('click', nazgulScreech);      // <<<<----DON'T FORGET TO ADD "()" at the end.
+  frodo.appendChild(theRingDiv);
+  
+  console.log(theRingDiv);   //just a test to see if it's appending.
+
   // create a div with an id of 'the-ring'
   // give the div a class of 'magic-imbued-jewelry'
   // add an event listener so that when a user clicks on the ring, the nazgulScreech function (provided) is invoked
   // add the ring as a child of Frodo
 }
-
+keepItSecretKeepItSafe();
 
 // Part 4
 
