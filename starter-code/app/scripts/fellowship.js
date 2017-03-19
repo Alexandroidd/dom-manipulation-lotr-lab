@@ -56,15 +56,23 @@ makeMiddleEarth();
 
 // Part 2
 
-function makeHobbits(){} 
+function makeHobbits(){
   // display an unordered list of hobbits in the shire (which is the first article tag on the page)
   // give each hobbit a class of hobbit
-
-//for(i=0;i<hobbits.length; i++)
+var forHobbits = document.createElement('ul');
+forHobbits.id = "hobbitHole";
 var needShire = document.getElementById('The Shire');
-needShire.innerHTML = <ul id="forHobbits"></ul>;
+needShire.appendChild(forHobbits);
+var hobbitHole = document.getElementById('hobbitHole');
 
-
+for(i=0;i<hobbits.length; i++) {
+  var eachHobbit = document.createElement('li');
+  eachHobbit.class = "Hobbit";
+  eachHobbit.innerHTML = hobbits[i] ;
+ hobbitHole.appendChild(eachHobbit);
+}
+}
+makeHobbits();
 
 
 // Part 3
@@ -74,7 +82,7 @@ function keepItSecretKeepItSafe() {
   // give the div a class of 'magic-imbued-jewelry'
   // add an event listener so that when a user clicks on the ring, the nazgulScreech function (provided) is invoked
   // add the ring as a child of Frodo
-};
+}
 
 
 // Part 4
