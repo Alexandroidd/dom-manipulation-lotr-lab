@@ -128,8 +128,8 @@ function makeBuddies() {
   // create an aside tag
   // attach an unordered list of the 'buddies' in the aside
   // insert your aside as a child element of rivendell
-  console.log(theBuddies);
-  console.log(buddyHolder);
+  console.log(theBuddies); //  <---again a test 
+  console.log(buddyHolder); //   <---again a test 
 }
 makeBuddies();
 
@@ -138,7 +138,11 @@ makeBuddies();
 
 function beautifulStranger() {
   // change the 'Strider' textnode to 'Aragorn'
+  document.getElementById('Strider').textContent = "Aragorn";
+  var aragorn = document.getElementById('Strider');
+  aragorn.id = 'Aragorn';
 }
+beautifulStranger();
 
 
 // Part 6
