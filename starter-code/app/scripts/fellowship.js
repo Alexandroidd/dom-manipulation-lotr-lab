@@ -99,11 +99,39 @@ keepItSecretKeepItSafe();
 
 
 function makeBuddies() {
+  var theBuddies = document.createElement('aside');
+  theBuddies.id = "buddiesAside";
+  document.body.appendChild(theBuddies);
+  var buddyHolder= document.createElement('ul');
+  buddyHolder.id = "thisBuddyHolder";
+  theBuddies.appendChild(buddyHolder);
+    for(i=0; i<buddies.length; i++) {
+    var eachBuddy = document.createElement('li');
+    eachBuddy.id = buddies[i];
+    eachBuddy.innerHTML = buddies[i];
+    buddyHolder.appendChild(eachBuddy);
+  }
+  var rivendell = document.getElementById('Rivendell');
+  rivendell.appendChild(theBuddies);
+  
+
+
+  // var buddiesLi = document.querySelector('#buddies li');
+  // for(i=0;i<buddies.length;i++) {
+  //   var eachBuddyLi = document.createElement('li');
+  //   eachBuddyLi.class = "buddy";
+  //   eachBuddyLi.innerHTML = buddies[i];
+    
+  //   theBuddiesUl.appendChild(eachBuddy);
+  // }
+
   // create an aside tag
   // attach an unordered list of the 'buddies' in the aside
   // insert your aside as a child element of rivendell
+  console.log(theBuddies);
+  console.log(buddyHolder);
 }
-
+makeBuddies();
 
 // Part 5
 
