@@ -149,8 +149,11 @@ beautifulStranger();
 
 function leaveTheShire() {
   // assemble the hobbits and move them to Rivendell
+  var rivendell = document.getElementById('Rivendell');
+  var hobbitParty = document.getElementById('hobbitHole');
+  rivendell.appendChild(hobbitParty);
 }
-
+leaveTheShire();
 
 // Part 7
 
